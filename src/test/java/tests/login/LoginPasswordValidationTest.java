@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import pages.Pages;
 import tests.BaseTest;
 
-public class LoginEmailValidationTest extends BaseTest {
+public class LoginPasswordValidationTest extends BaseTest {
 
     @BeforeClass
     public void setUp(){
@@ -22,7 +22,8 @@ public class LoginEmailValidationTest extends BaseTest {
     }
 
     @Test
-    public void  loginWithUnregisteredUsername(){
+    public void loginWithUnregisteredPassword(){
+
 //      Preconditions:
 //      Home page is present
         openAndVerifyPageUrl(driver,Config.BASE_URL);
@@ -36,23 +37,22 @@ public class LoginEmailValidationTest extends BaseTest {
         Pages.homePage.getHomepageLoginBtn().click();
         Pages.loginAndRegistration.waitDescriptionTitleVisible();
         Pages.loginAndRegistration.waitCreateAccountBtnVisibleEnabled();
-//      Step 2 Enter the user's credentials that contain unregistered email and registered password
+//      Step 2 Enter the user's credentials that contain registered email and unregistered password
 //      The error message pops up
-        Pages.loginAndRegistration.login(users.getUserWithInvalidEmail());
-        Pages.loginAndRegistration.waitInvalidLoginMsgVisible();
-////      Step 3 Clear the EMAIL field, leaving the password field populated with the registered password
-        Pages.loginAndRegistration.getEmailField().clear();
-        Pages.loginAndRegistration.isEmailFieldEmpty();
+        Pages.loginAndRegistration.login(users.getUserWithInvalidPassword());
+        Pages.loginAndRegistration.getInvalidLoginMsg();
+//      Step 3 Clear the password field, leaving the email field populated with the registered email
+        Pages.loginAndRegistration.getPasswordField().clear();
+        Pages.loginAndRegistration.isPasswordFieldEmpty();
 //      Step 4 Click on the Login button
-//      Both Email Address and Password fields get cleared out
-//      The error message pops up
-//      Additionally, the messages pop up under both Email Address and Password fields
-        Pages.loginAndRegistration.waitLoginBtnVisibleEnabled();
+//      Password field gets cleared out
+//      The error message pops up: "Invalid login or password."
+//      The message pops up under Password field:"This is a required field.
         Pages.loginAndRegistration.getLoginBtn().click();
-        Pages.loginAndRegistration.isEmailFieldEmpty();
         Pages.loginAndRegistration.isPasswordFieldEmpty();
         Pages.loginAndRegistration.waitInvalidLoginMsgVisible();
-        Pages.loginAndRegistration.waitMissingLoginEmailMsgVisible();
         Pages.loginAndRegistration.waitMissingLoginPasswordMsgVisible();
     }
+
+
 }

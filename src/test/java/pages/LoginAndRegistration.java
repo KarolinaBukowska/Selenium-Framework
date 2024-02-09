@@ -71,11 +71,11 @@ public class LoginAndRegistration {
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(getInvalidLoginMsg()));
     }
-    public void waitMissingLoginEmailVisible(){
+    public void waitMissingLoginEmailMsgVisible(){
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(getMissingLoginEmail()));
     }
-    public void waitMissingLoginPasswordVisible(){
+    public void waitMissingLoginPasswordMsgVisible(){
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(getMissingLoginPassword()));
     }
