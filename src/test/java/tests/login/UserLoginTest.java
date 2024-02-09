@@ -1,10 +1,11 @@
-package tests;
+package tests.login;
 
 import config.Config;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.Pages;
+import tests.BaseTest;
 
 public class UserLoginTest extends BaseTest {
 

@@ -21,6 +21,9 @@ public class LoginAndRegistration {
     By loginBtn = By.xpath("//button[contains(@class, 'button') and @title='Login']//span//span[contains(text(), 'Login')]");
     By emailField = By.cssSelector("#email");
     By passwordField = By.cssSelector("#pass");
+    By invalidLoginMsg = By.cssSelector(".error-msg span");
+    By missingLoginEmail = By.cssSelector("#advice-required-entry-email");
+    By missingLoginPassword = By.cssSelector("#advice-required-entry-pass");
 
     public WebElement getDescriptionTitle(){
         return driver.findElement(descriptionTitle);
@@ -36,6 +39,15 @@ public class LoginAndRegistration {
     }
     public WebElement getPasswordField(){
         return driver.findElement(passwordField);
+    }
+    public WebElement getInvalidLoginMsg(){
+        return driver.findElement(invalidLoginMsg);
+    }
+    public WebElement getMissingLoginEmail(){
+        return driver.findElement(missingLoginEmail);
+    }
+    public WebElement getMissingLoginPassword(){
+        return driver.findElement(missingLoginPassword);
     }
     public void waitDescriptionTitleVisible(){
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -55,6 +67,27 @@ public class LoginAndRegistration {
                 ExpectedConditions.elementToBeClickable(getLoginBtn())
         ));
     }
+    public void waitInvalidLoginMsgVisible(){
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(getInvalidLoginMsg()));
+    }
+    public void waitMissingLoginEmailVisible(){
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(getMissingLoginEmail()));
+    }
+    public void waitMissingLoginPasswordVisible(){
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(getMissingLoginPassword()));
+    }
+    public boolean isEmailFieldEmpty(){
+        WebElement emailField = getEmailField();
+        return emailField.getText().isEmpty();
+    }
+    public boolean isPasswordFieldEmpty(){
+        WebElement passwordField = getPasswordField();
+        return passwordField.getText().isEmpty();
+    }
+
     public void login(UserLoginData userData) {
         getEmailField().sendKeys(userData.getEmailAddress());
         getPasswordField().sendKeys(userData.getPassword());

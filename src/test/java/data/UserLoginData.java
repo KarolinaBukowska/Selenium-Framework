@@ -15,4 +15,14 @@ public class UserLoginData {
         return password;
     }
 
+    public UserLoginData(String emailAddress, String password) {
+        this.emailAddress = emailAddress;
+        this.password = password;
+    }
+
+    public UserLoginData() {
+        this.emailAddress = null;
+        this.password = null;
+    }
+
 }
