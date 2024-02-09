@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.Pages;
 
-public class UserLogin extends BaseTest {
+public class UserLoginTest extends BaseTest {
 
 
 
@@ -38,30 +38,5 @@ public class UserLogin extends BaseTest {
         Pages.loginAndRegistration.waitCreateAccountBtnVisibleEnabled();
         Pages.loginAndRegistration.login(users.getUserOne());
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
 }
