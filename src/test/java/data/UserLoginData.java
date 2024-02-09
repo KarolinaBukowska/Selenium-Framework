@@ -11,18 +11,8 @@ public class UserLoginData {
     public String getEmailAddress() {
         return emailAddress;
     }
-
     public String getPassword() {
         return password;
     }
 
-    public UserLoginData(String emailAddress, String password) {
-        this.emailAddress = emailAddress;
-        this.password = password;
-    }
-
-    public UserLoginData() {
-        this.emailAddress = null;
-        this.password = null;
-    }
 }
