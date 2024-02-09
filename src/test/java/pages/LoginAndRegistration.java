@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginAndRegistration {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
 
     public LoginAndRegistration(WebDriver driver) {
