@@ -7,11 +7,13 @@ public class Pages extends BaseTest {
 
     public static Homepage homePage;
     public static LoginAndRegistration loginAndRegistration;
+    public static AccountDashboard accountDashboard;
 
     public static void setDriver(WebDriver driver) {
         Pages.driver = driver;
         homePage = new Homepage(driver);
         loginAndRegistration = new LoginAndRegistration(driver);
+        accountDashboard = new AccountDashboard(driver);
     }
 
 }
