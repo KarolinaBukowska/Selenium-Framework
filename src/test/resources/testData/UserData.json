@@ -1,0 +1,17 @@
+{
+  "userOne": {
+    "emailAddress": "##spaceForRegisteredEmail##",
+    "password": "##spaceForRegisteredPassword##"
+  },
+  "userWithInvalidEmail": {
+    "emailAddress": "##spaceForUnregisteredEmail##",
+    "password": "##spaceForRegisteredPassword##"
+  },
+  "userWithInvalidPassword": {
+    "emailAddress": "##spaceForRegisteredEmail##",
+    "password": "##spaceForUnregisteredPassword##"
+  }
+}
+
+
+
