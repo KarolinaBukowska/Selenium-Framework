@@ -18,7 +18,7 @@ While the Selenium Framework provides comprehensive test coverage, there are som
 * Changes to the HTML structure of the website may cause tests to fail unexpectedly
 
 ### Skills Demonstrated in This Repository 🛠️ 
-The following skills are demonstrated through the implementation of the Selenide Framework:
+The following skills are demonstrated through the implementation of the Selenium Framework:
 * Utilizing loops to handle dynamic content on product pages
 * Integrating the Jackson library for parsing JSON data
 * Implementationg centralized Pages class, which serves as a repository for declaring and instantiating page classes through constructors.
