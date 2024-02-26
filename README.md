@@ -21,13 +21,13 @@ While the Selenium Framework provides comprehensive test coverage, there are som
 The following skills are demonstrated through the implementation of the Selenium Framework:
 * Utilizing loops to handle dynamic content on product pages
 * Integrating the Jackson library for parsing JSON data
-* Implementationg centralized Pages class, which serves as a repository for declaring and instantiating page classes through constructors.
-This approach enhances code readibility and enables an easy access to methods and objects related to a specific page.
+* Implementationg centralized Pages class, which serves as a repository for declaring and instantiating page classes through constructors
+This approach enhances code readability and enables an easy access to methods and objects related to a specific page
 * Locating web elements via css selectors and xpath expressions 
 * Utilizing well-defined methods that enable concise and efficient execution of multiple actions within a single line of code in the test class
-* Incorporating the use of constants to represent relative paths and URLs, ensuring clarity and maintainability in the codebase by centralizing key values
-* Setting up test environments using a centralized BaseTest class for a streamlined test setup.
-This class includes methods for initializing WebDriver instances, managing user data, verifying page URLs, and capturing screenshots upon test failure.
+* Incorporating the use of constants to represent relative paths and URL, ensuring clarity and maintainability in the codebase by centralizing key values
+* Setting up test environments using a centralized BaseTest class for a streamlined test setup
+This class includes methods for initializing WebDriver instances, managing user data, verifying page URLs, and capturing screenshots upon test failure
 
 ## Files Overview 📁
 
